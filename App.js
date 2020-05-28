@@ -1,21 +1,17 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import React from 'react';
+import {View,StyleSheet} from 'react-native';
+import Landing from './components/Landing';
 
 export default function App() {
-  const [outputText, setOutputText] = useState('Hello World!')
   return (
     <View style={styles.container}>
-      <Text>{outputText}</Text>
-      <Button title="Change Text" onPress={() =>setOutputText('Hello Sara!!!')}/>
+      <Landing/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#f0f0f0',
   },
 });
