@@ -1,21 +1,28 @@
 import React from 'react';
-import { View, Text, StyleSheet} from 'react-native';
-import { render } from 'react-dom';
+import { View, Text, StyleSheet, Button} from 'react-native';
 
-const logo = props => {
+
+const Header = props => {
+    
     return (
         <View style={styles.header}>
             <Text style={styles.logo}>
                 <Text style={{fontSize:70}}>ꪖ​</Text>ꫀ​𝘴​𝓽​ꫝ​ꫀ​𝓽​ꫀ​
             </Text>
+            <Button title='Log In' onPress={props.authentication}/>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
     header: {
+        width: '100%',
+        height: 130,
+        paddingTop: 20,
         paddingLeft: 20,
-        height: 120
+        flexDirection:'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
     },
     logo: {
         color: '#4955a9',
@@ -24,4 +31,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default logo;
+export default Header;
